@@ -1,0 +1,177 @@
+:root {
+  background-color: #03a9f4;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Open Sans;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 10rem;
+  color: white;
+  font-weight: bold;
+
+}
+
+h3 {
+  font-size: 5rem;
+ margin-bottom: 6rem;
+ color: white;
+}
+
+h4{
+
+    font-size: 5rem;
+    color: white;
+   margin-top: 2rem;
+
+}
+
+h1 > span {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 4.2rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 7rem;
+  font-weight: 500;
+}
+
+/* UTILITIES */
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 250rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container > * {
+  width: 100%;
+  height: 90%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* BUTTONS */
+.hgt{
+    height: 10rem;
+      margin-bottom: 4rem;
+}
+
+
+.btn {
+  font-size: 4rem;
+  padding: 1rem 0;
+  width: 30rem;
+  text-align: center;
+  border: 0.1rem solid #56a5eb;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #00008B;
+  background-color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* FORMS */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+select{
+  margin-bottom: 1rem;
+  width: 50rem;
+  height: 8rem;
+  padding: 1.5rem;
+  font-size: 4rem;
+  border: 1px solid #333;
+  background-color: white;
+   box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5); 
+}
+
+input {
+  margin-bottom: 4rem;
+  width: 250px;
+  height: 20rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  text-align: center;
+  letter-spacing: 10px;
+  border: 1px solid #404B69;
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5); 
+}
+
+.pad{
+  padding: 20px;
+  margin-top: 2rem;
+}
+
+.mag{
+	margin: 0 2rem 2rem;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.signature{
+border: 2px solid #404B69;
+}

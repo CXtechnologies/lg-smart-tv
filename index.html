@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kiosk player</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="home" class="flex-center flex-column signature">
+        <h1>Kiosk player</h1>
+		<h3>Enter screen ID</h3>
+
+<form>
+  <div style="display: flex;justify-content: center" id="otp-container">
+        <input oninput="inputInsideOtpInput(this)"
+               maxlength="1" type="number" class="mag">
+
+
+        <input oninput="inputInsideOtpInput(this)"
+               maxlength="1" type="number" class="mag">
+
+        <input oninput="inputInsideOtpInput(this)"
+               maxlength="1" type="number" class="mag">
+
+        <input oninput="inputInsideOtpInput(this)"
+               maxlength="1" type="number" class="mag">
+
+        <input oninput="inputInsideOtpInput(this)"
+               maxlength="1" type="number" class="mag">
+
+        <input oninput="inputInsideOtpInput(this)"
+               maxlength="1" type="number" class="mag">
+    </div>
+
+
+
+    <button
+      type="submit"
+      class="btn hgt"
+      id="saveScoreBtn"
+    >
+      Start Screen
+    </button>
+  </form>
+
+<h4>Last used</h4>
+  <select name="sortOrder">
+    <option value="">Newest</option>
+    <option value="lowest">Lowest</option>
+    <option value="highest">Highest</option>
+  </select>
+  <a class="btn" href="screen.html">Start Screen</a>
+
+
+      </div>
+    </div>
+
+<script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
