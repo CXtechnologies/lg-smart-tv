@@ -11,36 +11,40 @@
     <div class="container">
       <div id="home" class="flex-center flex-column signature">
         <h1>Kiosk player</h1>
-		<h3>Enter screen ID</h3>
+		<h3 id="now">Enter screen ID</h3>
 
-<form>
+<form action="screen.html" id="otp">
+    
   <div style="display: flex;justify-content: center" id="otp-container">
         <input oninput="inputInsideOtpInput(this)"
-               maxlength="1" type="number" class="mag">
+               maxlength="1" type="text" class="mag">
 
 
         <input oninput="inputInsideOtpInput(this)"
-               maxlength="1" type="number" class="mag">
+               maxlength="1" type="text" class="mag">
 
         <input oninput="inputInsideOtpInput(this)"
-               maxlength="1" type="number" class="mag">
+               maxlength="1" type="text" class="mag">
 
         <input oninput="inputInsideOtpInput(this)"
-               maxlength="1" type="number" class="mag">
+               maxlength="1" type="text" class="mag">
 
         <input oninput="inputInsideOtpInput(this)"
-               maxlength="1" type="number" class="mag">
+               maxlength="1" type="text" class="mag">
 
         <input oninput="inputInsideOtpInput(this)"
-               maxlength="1" type="number" class="mag">
+               maxlength="1" type="text" class="mag">
+               
+        <input oninput="inputInsideOtpInput(this)"
+               maxlength="1" type="text" class="mag">
     </div>
 
 
 
     <button
+      id="Btn"
       type="submit"
-      class="btn hgt"
-      id="saveScoreBtn"
+      class="btn hgt only"
     >
       Start Screen
     </button>
@@ -52,7 +56,7 @@
     <option value="lowest">Lowest</option>
     <option value="highest">Highest</option>
   </select>
-  <a class="btn" href="screen.html">Start Screen</a>
+  <a class="btn" href="">Start Screen</a>
 
 
       </div>

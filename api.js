@@ -1,26 +1,100 @@
+ray = JSON.parse(sessionStorage.getItem("ray"));
+
+var add;
+add = ray.join("");
+console.log(add);
+
+
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJmNzg3NmE0ZjkwNGNmMDIzNGNhMzY2NWFkNTMyZDAzZmE2ZGNiNzY0MTRmNDliYTVhMDNjZmE4NTY2YzVjNzFmOWFmNmZkNTg5ODFjODNkIn0.eyJhdWQiOiIyIiwianRpIjoiMmY3ODc2YTRmOTA0Y2YwMjM0Y2EzNjY1YWQ1MzJkMDNmYTZkY2I3NjQxNGY0OWJhNWEwM2NmYTg1NjZjNWM3MWY5YWY2ZmQ1ODk4MWM4M2QiLCJpYXQiOjE2MDM5NzM3OTYsIm5iZiI6MTYwMzk3Mzc5NiwiZXhwIjoxNjM1NTA5Nzk2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.BPDoP5pyfL9pSIxB_1OTX0A35wfVZzNUUSjJwrcs0llUOQGEIrpLekAS279B9AtcYoe1hw4ONGctuFXZqSBolPh1QPI9HIZQbl0kyffERrppIQBjwIExZsodXo5qQk4B6e5Jt3V9hSp0UgnJH5HQfpbNlxuKjEU5__KdPUEgB14cSu6GSmqyFsG67yLlFhbo6HkHGhY9gsOprWaRKO3xi5Y2FHP-MSoOZ0f3S9Gun0g0FXUXxzA7hYftWLuYu7m6Sal_inX7CQL8X_SXhbOq9ZC2s9aLN7isBbTX3oib49_Y3lv0b-lN1Ux-nYAao1luAmRuXsZu9Ed3hOUqz2S3lpzeNGJTPaOxIZFmDtTx2V_sVMP_eIP3q-nZGW7jXdH2sT6uspPmxKDQFO_Ti5BrMwnG3cPvqoGAEI8un7B6bk0J6cpSbhoPksGfIuxY3zkyexa_z5z8MCdcPcKv1NFO15t7GdQTrBSJ5BjYbYcjmO0AVAA-w3O8dOUV-JK_dBtu5sD6u46kN5qz1_3tjIPOQuFw33t3CA8uvmxF1cnxn0yDqyPupRBHlq7d4GA5f2i670UQWuFfd8BIupPIDonT6ORIJRM1YhKZq9Lfp-_rED5_17kbqiwH0lI2Gzz-KS_PXPeDtWjkuzyjFNXPfyX7GdeROOIHmsuIPpLQFx5wJ90");
 
-var requestOptions = {
-  method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
+myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjczYmU0MTM2MjNiZGMwOTI1ODA3NjEzNDVmYjkyZGUyOGM5MWIyNDhlNTljMTE2MTA3NjBlZDU5YmRiMTgzNzE1NzRmZmIzN2VlZmQ3YTRkIn0.eyJhdWQiOiIyIiwianRpIjoiNzNiZTQxMzYyM2JkYzA5MjU4MDc2MTM0NWZiOTJkZTI4YzkxYjI0OGU1OWMxMTYxMDc2MGVkNTliZGIxODM3MTU3NGZmYjM3ZWVmZDdhNGQiLCJpYXQiOjE2MDY4MTQxNzAsIm5iZiI6MTYwNjgxNDE3MCwiZXhwIjoxNjM4MzUwMTcwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.jTlARvTHHqF_aeLiezwi1U_xuTzdEUcDhkIt0vBQtXmsk8ASVQ53cVUItXo-7I8Ez8F5f4RvjmGbhMIq0osbEQPIC3UsIUmK0WRO48O0GwEhdk9XYlcJ9dSVHhDxXby-mOiOCOFhtsP0gyVc0un9a88Vxi41uOmLbTQ2-cmjCf-CTTHCaXTHhr03SRuDvjISfQRPLqiOjVSFwHnvGhtoF6F6PlT_EJQDPt_NYCIJMEVRSHHjvzsQWUHO3YcOtbQDJGBpg8k_zk-ooyW2qXD1KPbO0TGkJ77LzhIcZ6luBDepel8pq5sYoPOZAimk-e-GAae_RK8L-lMlvusO0gmmwrjHLvGPGcU1Yayd6Oxtyazqz0Ay9BIfWQd-XElMW0JVB0jk15a104zJPl-mCHR4La8c-9TOOSbXcTv9RA0ouPUMYh4_7dFjNQFbCTJCsZVaBeZexLB8XcxIaY19cIdk0b8_t3wey9gdYUL_TrfCPfONDrrnUSeKndWwp99I6XqAS5bldz4PNXZQErCkWpBpTRqN2OhBj63rCFBPq_4SWRiV4exw1u1s80wgpKjGhkaG0fctQfCxwy7W-qPxqc9XFX-dO5La0hhozRODYKAF-jE1Lb6PW1DSKcCP_2a9Ltx7JyxOoOH4t4QhKnPa10ZyIPezsEW0sjwKTdNqn_lexS0")
+
+var requestedOptions = {
+	method: 'POST',
+	headers: myHeaders,
+	redirect: 'follow'
 };
 
-fetch("digital-signage.devwepro.com/api/v1/monitors", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+var loader = document.getElementById("forWait");
+
+const url = "https://weareways.com/api/v1/monitors/key?key=" + add;
+const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+
+fetch(url, requestedOptions)
+.then(response => {
+	if (!response.ok) {
+		throw new Error(`HTTP error! status: ${response.status}`);
+	} else {
+		loader.remove();
+		return response.json();
+	}
+})
+
+.then(function (data) {
+	appendData(data);
+})
+
+.catch(e => {
+	console.log('There has been a problem with your fetch operation: ' + e.message);
+});
+
+
+function appendData(data) {
+	var mainContainer = document.getElementById("myData");
+	var myArray = data.records.monitor.sequence.contents;
+	
+	for (var i = 0; i < myArray.length; i++){
+		var cont = "http://weareways.com/storage/screen/" + myArray[i].file;
+		   var le = cont.length;
+		   var poin = cont.lastIndexOf(".");
+		   var accu1 = cont.substring(poin,le);
+		   var accu = accu1.toLowerCase();
+		   console.log(accu);
+		   
+		   if((accu == '.png') || (accu == '.jpg')) {
+			   var b = document.createElement("div");
+			   b.className = "carousel-item";
+			   
+			   var g = document.createElement("div");
+			   g.className = "view";
+			   
+			   var img = document.createElement("img");
+			   img.src = cont;
+			   img.style = "width: 100%; height: 100%;";
+			   img.className = "video-fluid";
+			   
+			   g.appendChild(img);
+			   b.appendChild(g);
+			   mainContainer.appendChild(b);
+			   
+		   } else if (accu == '.mp4') {
+			   var b = document.createElement("div");
+			   b.className = "carousel-item";
+			   
+			   var g = document.createElement("div");
+			   g.className = "view";
+			   
+			   var y = document.createElement("source");
+			   y.setAttribute("src", cont);
+			   y.setAttribute("type", "video/mp4");
+			   
+			   var x = document.createElement("VIDEO");
+			   x.setAttribute("style", "width: 100%; height: 100%;");
+			   x.setAttribute("class", "video-fluid");
+			   x.autoplay = true;
+			   x.loop = true;
+			   x.muted = true;
+			   
+			   x.appendChild(y);
+			   g.appendChild(x);
+			   b.appendChild(g);
+			   mainContainer.appendChild(b);
+		   }
+	}
+}
 
 
 
-var requestOptions2 = {
-  method: 'POST',
-  headers: myHeaders,
-  redirect: 'follow'
-};
 
-fetch("digital-signage.devewepro.com/api/v1/monitors/sequence?sequence_id=21", requestOptions2)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+
+

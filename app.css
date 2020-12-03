@@ -148,7 +148,7 @@ select{
 
 input {
   margin-bottom: 4rem;
-  width: 250px;
+  width: 200px;
   height: 20rem;
   padding: 1.5rem;
   margin-bottom: 1rem;
@@ -174,4 +174,13 @@ input::placeholder {
 
 .signature{
 border: 2px solid #404B69;
+}
+
+#otp {
+	display: none;
+}
+
+.only{
+	margin-left: 80rem;
+	margin-top: 2rem;
 }
